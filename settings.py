@@ -13,11 +13,11 @@ programs = [0, 0, 25, 33, 48]  # program number for each track, check pypianorol
 number_of_pitches = 72  # number of pitches or musical notes
 
 # Sampling
-interval = 5000  # interval where a result will be saved
+interval = 50  # interval where a result will be saved
 number_of_samples = 4
 
 # Training
-batch = 16
+batch_size = 16
 latent_dim = 128
 number_steps = 1000000
 

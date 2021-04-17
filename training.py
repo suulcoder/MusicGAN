@@ -50,7 +50,7 @@ liveloss = PlotLosses(outputs=[MatplotlibPlot(cell_size=(6,2))])
 def compute_gradient_penalty(discriminator, real_samples, fake_samples):
     alpha = torch.rand(real_samples.size(0), 1, 1, 1).cuda()
     interpolates = (alpha * real_samples + ((1 - alpha) * fake_samples))
-    interpolates = interpolates.requires_grad_(True
+    interpolates = interpolates.requires_grad_(True)
     d_interpolates = discriminator(interpolates)
     fake = torch.ones(real_samples.size(0), 1).cuda()
     gradients = torch.autograd.grad(
@@ -67,7 +67,7 @@ def compute_gradient_penalty(discriminator, real_samples, fake_samples):
 
 def train_one_step(d_optimizer, g_optimizer, real_samples):
     # Sample from the lantent distribution
-    latent = torch.randn(batch, latent_dim)
+    latent = torch.randn(batch_size, latent_dim)
 
     # Transfer to GPU
     if torch.cuda.is_available():

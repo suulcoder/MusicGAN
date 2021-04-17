@@ -49,4 +49,4 @@ def load_data():
 	data = torch.as_tensor(data, dtype=torch.float32)
 	dataset = torch.utils.data.TensorDataset(data)
 	return torch.utils.data.DataLoader(
-	    dataset, batch=batch, drop_last=True, shuffle=True)
+	    dataset, batch_size=batch_size, drop_last=True, shuffle=True)
