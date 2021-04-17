@@ -2,8 +2,6 @@ import torch
 
 
 class LayerNorm(torch.nn.Module):
-    """An implementation of Layer normalization that does not require size
-    information. Copied from https://github.com/pytorch/pytorch/issues/1959."""
     def __init__(self, n_features, eps=1e-5, affine=True):
         super().__init__()
         self.n_features = n_features

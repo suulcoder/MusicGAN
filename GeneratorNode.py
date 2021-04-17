@@ -1,7 +1,7 @@
 import torch
 from LayerNorm import *
 
-class GeneraterBlock(torch.nn.Module):
+class GeneratorNode(torch.nn.Module):
     def __init__(self, in_dim, out_dim, kernel, stride):
         super().__init__()
         self.transconv = torch.nn.ConvTranspose3d(in_dim, out_dim, kernel, stride)
