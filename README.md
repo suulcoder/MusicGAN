@@ -1,2 +1,0 @@
-# MusicGAN
-A AI composer
